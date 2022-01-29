@@ -12,3 +12,13 @@
 
   # Default build command.
   command = "yarn install && yarn build && echo 'Successful deploy ✨' "
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/admin"
+  to = "/static/admin"
+  status = 200
