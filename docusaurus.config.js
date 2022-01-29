@@ -96,7 +96,7 @@ const config = {
               },
               {
                 label: "CODEDOC",
-                to: "https://coderlg.coding.blog"
+                to: "https://coderlg.coding.blog",
               },
             ],
           },
