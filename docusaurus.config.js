@@ -87,6 +87,19 @@ const config = {
               },
             ],
           },
+          {
+            title: "My other blogs",
+            items: [
+              {
+                label: "Jekyll",
+                to: "https://im-coder-lg.github.io",
+              },
+              {
+                label: "CODEDOC",
+                to: "https://coderlg.coding.blog"
+              },
+            ],
+          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} im-coderlg. MIT License :)`,
       },
