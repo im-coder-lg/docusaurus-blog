@@ -8,27 +8,20 @@ const FeatureList = [
     Svg: require("../../static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-        Started at 2020, came here at 2021, successfully fulfilled a year on GitHub
+        Started at 2020, came here at 2021, successfully fulfilled a year on
+        GitHub
       </>
     ),
   },
   {
     title: "Debugger",
     Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
-    description: (
-      <>
-        Quickly debugging and solving issues ASAP.
-      </>
-    ),
+    description: <>Quickly debugging and solving issues ASAP.</>,
   },
   {
     title: "Teenager",
     Svg: require("../../static/img/undraw_docusaurus_react.svg").default,
-    description: (
-      <>
-        IRL, yeah.
-      </>
-    ),
+    description: <>IRL, yeah.</>,
   },
 ];
 

@@ -1,0 +1,44 @@
+name: Prettier - PRs
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # Make sure the actual branch is checked out when running on pull requests
+          ref: ${{ github.head_ref }}
+          # This is important to fetch the changes to the previous commit
+          fetch-depth: 0
+        if: success()      
+      - name: Git Pull everything
+        run: |
+          git fetch
+          git pull
+        if: success()
+      - name: Set up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+        if: success()
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.2
+        with:
+          # This part is also where you can pass other options, for example:
+          prettier_options: --write .
+          only_changed: True
+        if: success()
+      - name: Inspect for Prettier
+        run: |
+          npm install
+          npm run fc
+        if: success()
+      - name: Final thing
+        run: echo "PR has Prettier!"

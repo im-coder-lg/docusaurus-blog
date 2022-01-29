@@ -24,14 +24,12 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/im-coder-lg/docusaurus-blog/blob/main",
+          editUrl: "https://github.com/im-coder-lg/docusaurus-blog/blob/main",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/im-coder-lg/docusaurus-blog/blob/main",
+          editUrl: "https://github.com/im-coder-lg/docusaurus-blog/blob/main",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -86,6 +84,19 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/im-coder-lg",
+              },
+            ],
+          },
+          {
+            title: "My other blogs",
+            items: [
+              {
+                label: "Jekyll",
+                to: "https://im-coder-lg.github.io",
+              },
+              {
+                label: "CODEDOC",
+                to: "https://coderlg.coding.blog",
               },
             ],
           },
