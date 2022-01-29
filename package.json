@@ -1,6 +1,6 @@
 {
-  "name": "website",
-  "version": "0.0.0",
+  "name": "im-coder-lg_website",
+  "version": "0.1-prereleased",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
