@@ -24,14 +24,12 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/im-coder-lg/docusaurus-blog/blob/main",
+          editUrl: "https://github.com/im-coder-lg/docusaurus-blog/blob/main",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/im-coder-lg/docusaurus-blog/blob/main",
+          editUrl: "https://github.com/im-coder-lg/docusaurus-blog/blob/main",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

@@ -6,12 +6,15 @@ tags: [old-times]
 ---
 
 Utterances info and installation guide
+
 <!--more-->
 
-# ***Only for Jekyll, I'm sorry.***
+# **_Only for Jekyll, I'm sorry._**
 
 # Utterances
+
 Anyone here who is a comment freak? Like, any blog they visit, if there is support for comments, they will type one immediately? Well, they might have heard of Disqus. A free comment system but if used free, this happens:
+
 ```
 today:
 me: I hosted a blog today and added Disqus!
@@ -25,6 +28,7 @@ me sees utterances: good
 one week later...
 me checking blog: wow, no permission, no ads, utterances is cool!
 ```
+
 I am going to explain how to install Utterances on your blog.
 
 ## What is Utterances?
@@ -34,6 +38,7 @@ Utterances is a comment system that uses GitHub Primer, the css toolkit that pow
 It uses GitHub issues, so, all a person needs to comment is a GitHub account and for you, a repo included.
 
 ## Installation
+
 We will be going via steps.
 
 ### Step 1: App installation
@@ -41,6 +46,7 @@ We will be going via steps.
 Install the Utterances app from [here](https://github.com/apps/utterances)
 
 ### Step 2: Utterances code
+
 Go to [utteranc.es](https://utteranc.es) and toggle the settings.
 
 Fill out the repo name, by making a repo for your comments or any other methods.
@@ -59,13 +65,15 @@ Make a html file inside the `_includes` directory called `utterances.html`.
 
 Then, make a text file, and copy the info filled in repo, issue-term, theme and label, if you add it.
 
-Then , replace it with 
+Then , replace it with
+
 ```yaml
 {{ site.utterances.repo }}
 {{ site.utterances.issue-term }}
 {{ site.utterances.theme }}
 {{ site.utterances.label }}
 ```
+
 , only if you add labels.
 
 Then, in config.yml, add these lines:
@@ -78,7 +86,7 @@ utterances:
 	label: #if you add it.
 ```
 
-After adding these lines, go to `_layouts` and open `post.html` in an editor. 
+After adding these lines, go to `_layouts` and open `post.html` in an editor.
 
 add these lines between `</article>` and `<style>`:
 
@@ -97,5 +105,3 @@ If you have those lines filled up, Utterances will successfully work.
 Happy commenting on open-source tech!
 
 All code found in my portfolio.
-
-
