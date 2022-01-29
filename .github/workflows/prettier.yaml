@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
           # This is important to fetch the changes to the previous commit
           fetch-depth: 0
-        if: success()      
+        if: success()
       - name: Git Pull everything
         run: |
           git fetch
