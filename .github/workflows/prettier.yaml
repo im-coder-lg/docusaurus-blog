@@ -19,6 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
           # This is important to fetch the changes to the previous commit
           fetch-depth: 0
+          repo-token: ${{ secrets.PAT_GITHUB_TOKEN }}
         if: success()
       - name: Git Pull everything
         run: |
