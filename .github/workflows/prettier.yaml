@@ -31,17 +31,22 @@ jobs:
         with:
           node-version: "16"
         if: success()
-      - name: Prettify code
-        uses: creyD/prettier_action@v4.2
-        with:
-          # This part is also where you can pass other options, for example:
-          prettier_options: --write .
-          only_changed: True
-        if: success()
+      - name: Code Formatting (website)
+        run: |
+          npm i -g prettier
+          cd docs
+          npx prettier --write .
       - name: Inspect for Prettier
         run: |
           npm install
           npm run fc
         if: success()
+      - name: Add Git User
+        uses: fregante/setup-git-user@v1
+      - name: Push changes
+        run: |
+          git add .
+          git commit -m "style: Code Formatting Workflow" -m "Either triggered by cron or workflow_dispatch"
+          git push --force          
       - name: Final thing
         run: echo "Prettified code!"
