@@ -3,8 +3,6 @@ name: Prettier everywhere
 on:
   schedule:
   - cron: 30 05 15 * *
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
   workflow_dispatch:
