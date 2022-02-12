@@ -1,6 +1,8 @@
-name: Prettier - PRs
+name: Prettier everywhere
 
 on:
+  schedule:
+  - cron: 30 05 15 * *
   push:
     branches: [main]
   pull_request:
@@ -44,4 +46,4 @@ jobs:
           npm run fc
         if: success()
       - name: Final thing
-        run: echo "PR has Prettier!"
+        run: echo "Prettified code!"
