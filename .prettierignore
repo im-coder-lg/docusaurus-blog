@@ -2,3 +2,9 @@
 build
 coverage
 .docusaurus
+
+# and some stupid directories
+
+src/css
+src/css/contrib
+src/css/fonts
