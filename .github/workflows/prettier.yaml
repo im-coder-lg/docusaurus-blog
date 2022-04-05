@@ -34,7 +34,6 @@ jobs:
       - name: Code Formatting (website)
         run: |
           npm i -g prettier
-          cd docs
           npx prettier --write .
       - name: Inspect for Prettier
         run: |
