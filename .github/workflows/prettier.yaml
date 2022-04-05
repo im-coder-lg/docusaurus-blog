@@ -51,7 +51,7 @@ jobs:
         if: success()
         run: |
           git add .
-          git commit -m "style: Code Formatting Workflow" -m "Either triggered by cron or workflow_dispatch" -d "Committed using im-coder-lg's account"
+          git commit -m "style: Code Formatting Workflow" -m "Either triggered by cron or workflow_dispatch" -m "Committed using im-coder-lg's account"
           git push --force
       - name: Final thing
         run: |
