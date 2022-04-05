@@ -38,7 +38,7 @@ jobs:
       - name: Inspect for Prettier
         run: |
           npm install
-          npx prettier --check --ignore src/css/*
+          npx prettier --check --ignore src/css/fonts
         if: success()
       - name: Add Git User
         env: 
