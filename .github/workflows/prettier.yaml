@@ -2,7 +2,7 @@ name: Prettier everywhere
 
 on:
   schedule:
-  - cron: 30 05 15 * *
+    - cron: 30 05 15 * *
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -47,6 +47,6 @@ jobs:
         run: |
           git add .
           git commit -m "style: Code Formatting Workflow" -m "Either triggered by cron or workflow_dispatch"
-          git push --force          
+          git push --force
       - name: Final thing
         run: echo "Prettified code!"

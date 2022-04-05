@@ -4,6 +4,9 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
+const math = require('remark-math');
+const katex = require('rehype-katex');
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "@im-coder-lg/blog",
@@ -25,6 +28,8 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl: "https://github.com/im-coder-lg/docusaurus-blog/blob/main",
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
         blog: {
           showReadingTime: true,
@@ -36,6 +41,7 @@ const config = {
         },
       }),
     ],
+    
   ],
 
   themeConfig:
@@ -101,7 +107,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} im-coderlg. MIT License :)`,
+        copyright: `Copyright © ${new Date().getFullYear()} im-coder-lg. MIT License :)`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -110,4 +116,16 @@ const config = {
     }),
 };
 
-module.exports = config;
+module.exports = config, {
+  stylesheets: [
+    {
+      href: '/src/css/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X',
+      crossorigin: 'anonymous',
+    },
+  ],
+};
+
+
