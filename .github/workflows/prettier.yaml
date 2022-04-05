@@ -44,9 +44,19 @@ jobs:
       - name: Add Git User
         uses: fregante/setup-git-user@v1
       - name: Push changes
+        if: success()
         run: |
           git add .
           git commit -m "style: Code Formatting Workflow" -m "Either triggered by cron or workflow_dispatch"
           git push --force
       - name: Final thing
-        run: echo "Prettified code!"
+        run: |
+          echo "Prettified code ✨"
+          curl \
+            -H "Title: Prettie workflow success"
+            -H "Priority: urgent" \
+            -d "Prettier workflow job completed successfully for im-coder-lg/docusaurus-blog ✨" \
+            ${NTFY-URI}
+        
+        env:
+          NTFY-URI: ${{secrets.NTFY_URI}}
