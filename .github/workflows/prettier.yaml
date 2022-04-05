@@ -34,7 +34,7 @@ jobs:
       - name: Code Formatting (website)
         run: |
           npm i -g prettier
-          npx prettier --write .
+          npx prettier --write . --ignore src/css/*
       - name: Inspect for Prettier
         run: |
           npm install
