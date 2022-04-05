@@ -42,12 +42,17 @@ jobs:
           npm run fc
         if: success()
       - name: Add Git User
-        uses: fregante/setup-git-user@v1
+        env: 
+          MAILID: ${{secrets.GIT_AUTHOR_EMAIL}}
+        run: |
+          git config --global user.name "im-coder-lg (Action Triggered)"
+          git config --global user.email "${MAILID}"
+          
       - name: Push changes
         if: success()
         run: |
           git add .
-          git commit -m "style: Code Formatting Workflow" -m "Either triggered by cron or workflow_dispatch"
+          git commit -m "style: Code Formatting Workflow" -m "Either triggered by cron or workflow_dispatch" -d "Committed using im-coder-lg's account"
           git push --force
       - name: Final thing
         run: |
